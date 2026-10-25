@@ -2,7 +2,7 @@
 
 A blockchain-based application for monitoring and recording Live 5G network slice Service Level Agreement (SLA) measurements and violations. The project combines a Solidity smart contract, an Ethereum test network, a browser-based dashboard, and Python-based monitoring components.
 
-# We have a total of 5 Ubuntu VMs in VMware Workstation. 4 out of 5 VMs are for simulating the complex Open5G Network Slicing setup, and 1 VM is for the Blockchain layer. 
+#We have a total of 5 Ubuntu VMs in VMware Workstation. 4 out of 5 VMs are for simulating the complex Open5G Network Slicing setup, and 1 VM is for the Blockchain layer. 
 
 ## Features
 
