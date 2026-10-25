@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        5G Network Slice Security DApp
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                5G
+            </div>
+
+            <div>
+                <h1>
+                    Network Slice Security DApp
+                </h1>
+
+                <p>
+                    5G SLA Monitoring & Blockchain Audit
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <div
+                id="networkStatus"
+                class="status-pill offline"
+            >
+                ● Disconnected
+            </div>
+
+            <button
+                id="connectWalletBtn"
+                class="btn btn-wallet"
+            >
+                Connect MetaMask
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="container">
+
+        <!-- =================================================
+             SYSTEM STATUS
+        ================================================== -->
+
+        <section class="system-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        BLOCKCHAIN
+                    </span>
+
+                    <h2>
+                        Blockchain Connection
+                    </h2>
+                </div>
+
+                <div
+                    id="blockchainStatus"
+                    class="status-pill offline"
+                >
+                    Not connected
+                </div>
+
+            </div>
+
+
+            <div class="system-grid">
+
+                <div class="info-item">
+
+                    <span>
+                        Network
+                    </span>
+
+                    <strong id="blockchainNetwork">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Chain ID
+                    </span>
+
+                    <strong id="chainId">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Wallet
+                    </span>
+
+                    <strong
+                        id="walletAddress"
+                        class="address"
+                    >
+                        Not connected
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Smart Contract
+                    </span>
+
+                    <strong
+                        id="contractAddress"
+                        class="address"
+                    >
+                        0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             API STATUS
+        ================================================== -->
+
+        <section class="api-panel">
+
+            <div>
+
+                <span class="eyebrow">
+                    5G CORE
+                </span>
+
+                <h2>
+                    Live Network Status
+                </h2>
+
+            </div>
+
+
+            <div class="api-status-wrapper">
+
+                <span
+                    id="apiStatusDot"
+                    class="status-dot"
+                ></span>
+
+                <span id="apiStatusText">
+                    Checking API...
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <section class="intro">
+
+            <span class="eyebrow">
+                REAL-TIME MONITORING
+            </span>
+
+            <h2>
+                5G Network Slice SLA Dashboard
+            </h2>
+
+            <p>
+                This dashboard reads the configuration directly
+                from the live Open5GS 5G network. SLA measurements
+                are performed by the existing 5G measurement engine
+                and automatically recorded on the blockchain.
+            </p>
+
+            <div class="architecture-flow">
+
+                <div class="flow-box">
+                    <strong>
+                        5G SA
+                    </strong>
+                    <small>
+                        Open5GS
+                    </small>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-box">
+                    <strong>
+                        SLA Test
+                    </strong>
+                    <small>
+                        iperf3 + ping
+                    </small>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-box">
+                    <strong>
+                        API
+                    </strong>
+                    <small>
+                        Python
+                    </small>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-box blockchain-flow">
+                    <strong>
+                        Blockchain
+                    </strong>
+                    <small>
+                        Ethereum
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SLICE 1
+        ================================================== -->
+
+        <section
+            id="slice1"
+            class="slice-card slice-one"
+        >
+
+            <div class="slice-header">
+
+                <div class="slice-title">
+
+                    <div class="slice-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <span class="eyebrow">
+                            NETWORK SLICE
+                        </span>
+
+                        <h2>
+                            Slice 1
+                        </h2>
+
+                        <p>
+                            SMF-01 → UPF-01
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="slice1Status"
+                    class="result-badge neutral"
+                >
+                    Not Tested
+                </div>
+
+            </div>
+
+
+            <!-- LIVE CONFIGURATION -->
+
+            <div class="subsection">
+
+                <div class="subsection-heading">
+
+                    <h3>
+                        Live 5G Configuration
+                    </h3>
+
+                    <button
+                        id="refreshSlice1Btn"
+                        class="btn btn-secondary"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+
+                <div class="config-grid">
+
+                    <div class="config-item">
+                        <span>Slice ID</span>
+                        <strong id="s1SliceId">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SST</span>
+                        <strong id="s1Sst">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SD</span>
+                        <strong id="s1Sd">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>DNN</span>
+                        <strong id="s1Dnn">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SMF</span>
+                        <strong id="s1Smf">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SMF IP</span>
+                        <strong id="s1SmfIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UPF</span>
+                        <strong id="s1Upf">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UPF IP</span>
+                        <strong id="s1UpfIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>gNB IP</span>
+                        <strong id="s1GnbIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UE IP</span>
+                        <strong id="s1UeIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>PDU Status</span>
+                        <strong id="s1PduStatus">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SUPI</span>
+                        <strong id="s1Supi">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SLA POLICY -->
+
+            <div class="subsection">
+
+                <div class="subsection-heading">
+
+                    <h3>
+                        SLA Policy
+                    </h3>
+
+                    <span class="read-only-label">
+                        READ ONLY
+                    </span>
+
+                </div>
+
+
+                <div class="sla-policy-grid">
+
+                    <div class="policy-item">
+                        <span>
+                            Required Bandwidth
+                        </span>
+                        <strong id="s1RequiredBandwidth">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Minimum Bandwidth
+                        </span>
+                        <strong id="s1MinimumBandwidth">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Maximum Latency
+                        </span>
+                        <strong id="s1MaximumLatency">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Maximum Packet Loss
+                        </span>
+                        <strong id="s1MaximumLoss">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEST BUTTON -->
+
+            <div class="test-area">
+
+                <button
+                    id="runSlice1Btn"
+                    class="btn btn-primary btn-large"
+                >
+                    ▶ Run Slice 1 SLA Test
+                </button>
+
+                <span
+                    id="s1TestMessage"
+                    class="test-message"
+                >
+                    Ready
+                </span>
+
+            </div>
+
+
+            <!-- SLA RESULT -->
+
+            <div
+                id="s1Result"
+                class="result-panel hidden"
+            >
+
+                <div class="result-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SLA MEASUREMENT
+                        </span>
+
+                        <h3>
+                            Slice 1 Test Result
+                        </h3>
+
+                    </div>
+
+                    <div
+                        id="s1Overall"
+                        class="result-badge"
+                    >
+                        —
+                    </div>
+
+                </div>
+
+
+                <div class="metric-grid">
+
+                    <div class="metric-card">
+
+                        <span>
+                            Bandwidth
+                        </span>
+
+                        <strong id="s1MeasuredBandwidth">
+                            —
+                        </strong>
+
+                        <small id="s1BandwidthThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s1BandwidthStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Average Latency
+                        </span>
+
+                        <strong id="s1MeasuredLatency">
+                            —
+                        </strong>
+
+                        <small id="s1LatencyThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s1LatencyStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Packet Loss
+                        </span>
+
+                        <strong id="s1MeasuredLoss">
+                            —
+                        </strong>
+
+                        <small id="s1LossThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s1LossStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BLOCKCHAIN RESULT -->
+
+                <div class="blockchain-result">
+
+                    <div class="result-heading compact">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                IMMUTABLE AUDIT
+                            </span>
+
+                            <h3>
+                                Blockchain Record
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="s1BlockchainStatus"
+                            class="result-badge"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="transaction-list">
+
+                        <div class="transaction-item">
+
+                            <div>
+                                <span>
+                                    SLA Measurement
+                                </span>
+
+                                <strong>
+                                    Recorded
+                                </strong>
+                            </div>
+
+                            <code
+                                id="s1MeasurementTx"
+                            >
+                                —
+                            </code>
+
+                            <button
+                                class="copy-btn"
+                                data-copy-target="s1MeasurementTx"
+                            >
+                                Copy
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="s1Violations"
+                            class="violations-container"
+                        >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SLICE 2
+        ================================================== -->
+
+        <section
+            id="slice2"
+            class="slice-card slice-two"
+        >
+
+            <div class="slice-header">
+
+                <div class="slice-title">
+
+                    <div class="slice-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <span class="eyebrow">
+                            NETWORK SLICE
+                        </span>
+
+                        <h2>
+                            Slice 2
+                        </h2>
+
+                        <p>
+                            SMF-02 → UPF-02
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="slice2Status"
+                    class="result-badge neutral"
+                >
+                    Not Tested
+                </div>
+
+            </div>
+
+
+            <!-- LIVE CONFIGURATION -->
+
+            <div class="subsection">
+
+                <div class="subsection-heading">
+
+                    <h3>
+                        Live 5G Configuration
+                    </h3>
+
+                    <button
+                        id="refreshSlice2Btn"
+                        class="btn btn-secondary"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+
+                <div class="config-grid">
+
+                    <div class="config-item">
+                        <span>Slice ID</span>
+                        <strong id="s2SliceId">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SST</span>
+                        <strong id="s2Sst">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SD</span>
+                        <strong id="s2Sd">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>DNN</span>
+                        <strong id="s2Dnn">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SMF</span>
+                        <strong id="s2Smf">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SMF IP</span>
+                        <strong id="s2SmfIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UPF</span>
+                        <strong id="s2Upf">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UPF IP</span>
+                        <strong id="s2UpfIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>gNB IP</span>
+                        <strong id="s2GnbIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>UE IP</span>
+                        <strong id="s2UeIp">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>PDU Status</span>
+                        <strong id="s2PduStatus">—</strong>
+                    </div>
+
+                    <div class="config-item">
+                        <span>SUPI</span>
+                        <strong id="s2Supi">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SLA POLICY -->
+
+            <div class="subsection">
+
+                <div class="subsection-heading">
+
+                    <h3>
+                        SLA Policy
+                    </h3>
+
+                    <span class="read-only-label">
+                        READ ONLY
+                    </span>
+
+                </div>
+
+
+                <div class="sla-policy-grid">
+
+                    <div class="policy-item">
+                        <span>
+                            Required Bandwidth
+                        </span>
+                        <strong id="s2RequiredBandwidth">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Minimum Bandwidth
+                        </span>
+                        <strong id="s2MinimumBandwidth">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Maximum Latency
+                        </span>
+                        <strong id="s2MaximumLatency">
+                            —
+                        </strong>
+                    </div>
+
+                    <div class="policy-item">
+                        <span>
+                            Maximum Packet Loss
+                        </span>
+                        <strong id="s2MaximumLoss">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEST BUTTON -->
+
+            <div class="test-area">
+
+                <button
+                    id="runSlice2Btn"
+                    class="btn btn-primary btn-large"
+                >
+                    ▶ Run Slice 2 SLA Test
+                </button>
+
+                <span
+                    id="s2TestMessage"
+                    class="test-message"
+                >
+                    Ready
+                </span>
+
+            </div>
+
+
+            <!-- SLA RESULT -->
+
+            <div
+                id="s2Result"
+                class="result-panel hidden"
+            >
+
+                <div class="result-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SLA MEASUREMENT
+                        </span>
+
+                        <h3>
+                            Slice 2 Test Result
+                        </h3>
+
+                    </div>
+
+                    <div
+                        id="s2Overall"
+                        class="result-badge"
+                    >
+                        —
+                    </div>
+
+                </div>
+
+
+                <div class="metric-grid">
+
+                    <div class="metric-card">
+
+                        <span>
+                            Bandwidth
+                        </span>
+
+                        <strong id="s2MeasuredBandwidth">
+                            —
+                        </strong>
+
+                        <small id="s2BandwidthThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s2BandwidthStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Average Latency
+                        </span>
+
+                        <strong id="s2MeasuredLatency">
+                            —
+                        </strong>
+
+                        <small id="s2LatencyThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s2LatencyStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Packet Loss
+                        </span>
+
+                        <strong id="s2MeasuredLoss">
+                            —
+                        </strong>
+
+                        <small id="s2LossThreshold">
+                            —
+                        </small>
+
+                        <div
+                            id="s2LossStatus"
+                            class="metric-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BLOCKCHAIN RESULT -->
+
+                <div class="blockchain-result">
+
+                    <div class="result-heading compact">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                IMMUTABLE AUDIT
+                            </span>
+
+                            <h3>
+                                Blockchain Record
+                            </h3>
+
+                        </div>
+
+                        <span
+                            id="s2BlockchainStatus"
+                            class="result-badge"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="transaction-list">
+
+                        <div class="transaction-item">
+
+                            <div>
+                                <span>
+                                    SLA Measurement
+                                </span>
+
+                                <strong>
+                                    Recorded
+                                </strong>
+                            </div>
+
+                            <code
+                                id="s2MeasurementTx"
+                            >
+                                —
+                            </code>
+
+                            <button
+                                class="copy-btn"
+                                data-copy-target="s2MeasurementTx"
+                            >
+                                Copy
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="s2Violations"
+                            class="violations-container"
+                        >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACTIVITY / EXPLANATION
+        ================================================== -->
+
+        <section class="explanation-panel">
+
+            <span class="eyebrow">
+                SECURITY MODEL
+            </span>
+
+            <h2>
+                How the SLA Security Workflow Works
+            </h2>
+
+            <div class="workflow-grid">
+
+                <div class="workflow-card">
+
+                    <span class="workflow-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Read Live Configuration
+                    </h3>
+
+                    <p>
+                        The dashboard retrieves the active
+                        Open5GS slice, SMF, UPF, UE and SLA
+                        policy information.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-card">
+
+                    <span class="workflow-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Perform Real Test
+                    </h3>
+
+                    <p>
+                        The existing Python SLA engine measures
+                        actual bandwidth, latency and packet loss
+                        on the selected 5G slice.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-card">
+
+                    <span class="workflow-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Evaluate SLA
+                    </h3>
+
+                    <p>
+                        Each measurement is compared against the
+                        read-only SLA thresholds configured for
+                        that slice.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-card">
+
+                    <span class="workflow-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Record on Blockchain
+                    </h3>
+
+                    <p>
+                        The SLA measurement is permanently
+                        recorded and failed metrics generate
+                        corresponding violation records.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div>
+            5G Network Slice Security DApp
+        </div>
+
+        <div>
+            Open5GS · Python · Ethereum · Smart Contracts
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         ETHERS.JS
+    ====================================================== -->
+
+    <script src="lib/ethers.umd.min.js"></script>
+
+    <!-- =====================================================
+         APPLICATION
+    ====================================================== -->
+
+    <script src="app.js" defer></script>
+
+
+<section id="sepoliaDemoPanel"
+  style="max-width:900px;margin:24px auto;padding:20px;border:1px solid #ccc;border-radius:12px;">
+  <h2>Sepolia Blockchain Demo</h2>
+  <p><strong>Demo data only.</strong> This transaction is separate from live Open5GS SLA measurements.</p>
+  <label for="sepoliaDemoSlice">Select slice:</label>
+  <select id="sepoliaDemoSlice">
+    <option value="1">Slice 1 — demo measurement</option>
+    <option value="2">Slice 2 — demo measurement</option>
+  </select>
+  <button id="sepoliaDemoBtn" type="button" class="btn btn-primary">
+    Record Demo SLA Measurement on Sepolia
+  </button>
+  <p id="sepoliaDemoStatus" role="status" aria-live="polite">Ready</p>
+  <p id="sepoliaDemoTx"></p>
+</section>
+
+</body>
+
+</html>

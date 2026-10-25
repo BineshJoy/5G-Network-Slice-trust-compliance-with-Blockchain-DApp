@@ -1,0 +1,503 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "configHash",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "registeredBy",
+          "type": "address"
+        }
+      ],
+      "name": "ConfigurationRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "measuredBandwidthCentiMbps",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "measuredLatencyMicroseconds",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "measuredPacketLossCentiPercent",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "bandwidthCompliant",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "latencyCompliant",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "packetLossCompliant",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "SLAMeasurementRecorded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "violationType",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "reportedBy",
+          "type": "address"
+        }
+      ],
+      "name": "ViolationRecorded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "BANDWIDTH_SCALE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "LATENCY_SCALE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "PACKET_LOSS_SCALE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        }
+      ],
+      "name": "getConfiguration",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSLAMeasurement",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "sliceId",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "requiredBandwidthMbps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "measuredBandwidthCentiMbps",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "measuredLatencyMicroseconds",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "measuredPacketLossCentiPercent",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "bandwidthCompliant",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "latencyCompliant",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "packetLossCompliant",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recordedBy",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct NetworkSliceSecurity.SLAMeasurement",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        }
+      ],
+      "name": "getSLAMeasurementCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getViolation",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "sliceId",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "violationType",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "reportedBy",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct NetworkSliceSecurity.Violation",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        }
+      ],
+      "name": "getViolationCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "requiredBandwidthMbps",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "measuredBandwidthCentiMbps",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "measuredLatencyMicroseconds",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "measuredPacketLossCentiPercent",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "bandwidthCompliant",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "latencyCompliant",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "packetLossCompliant",
+          "type": "bool"
+        }
+      ],
+      "name": "recordSLAMeasurement",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "violationType",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "name": "recordViolation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "sliceId",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sst",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "sd",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "dnn",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "smf",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "upf",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "configHash",
+          "type": "string"
+        }
+      ],
+      "name": "registerConfiguration",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
