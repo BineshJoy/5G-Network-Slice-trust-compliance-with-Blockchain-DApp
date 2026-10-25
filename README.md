@@ -146,7 +146,7 @@ network-slice-security-dapp/
 
 ## Dashboard Screenshot
 
-![Network Slice Security DApp dashboard](docs/screenshots/dashboard.png)
+![Network Slice Security DApp dashboard](docs/screenshots/)
 
 ## Security Notes
 
