@@ -4,11 +4,11 @@
 
 **We have a total of 5 Ubuntu VMs in VMware Workstation. 4 out of 5 VMs are for simulating the complex Open5G Network Slicing setup, and 1 VM is for the Blockchain layer.** 
 
-**1.	VM1-5G Core
+1.	VM1-5G Core
 2.	VM2-UE & RAN Simulator
 3.	VM3-UPF01 - User Plane function 1(5G Slice 1)
 4.	VM4-UPF02 - User Plane function 2(5G Slice 2)
-5.	VM5-Blockchain Layer (Ethereum-Sepolia)**
+5.	VM5-Blockchain Layer (Ethereum-Sepolia)
 
 
 ## Features
