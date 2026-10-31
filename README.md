@@ -25,7 +25,7 @@ Here, Blockchain will play an important role. These immutable contracts in the b
 - Run local SLA integration and testing using Hardhat.
 
 ## Technology Stack
-
+- setting and bringing up Open5G setup
 - Solidity 0.8.34
 - Hardhat 3
 - Ethereum Sepolia Testnet
@@ -33,7 +33,7 @@ Here, Blockchain will play an important role. These immutable contracts in the b
 - MetaMask
 - HTML, CSS and JavaScript
 - Python and Node.js
-
+- Public cloud hosted Dapp on Vercel
 ## Deployed Smart Contract
 
 | Property | Value |
@@ -157,6 +157,9 @@ network-slice-security-dapp/
 ## Dashboard Screenshot
 
 ![Network Slice Security DApp dashboard](docs/screenshots/)
+
+**Cloud Hosting (in Vercel) the Dapp to the public**
+https://teamspecialcharactersvyuham26-front.vercel.app/ 
 
 ## Security Notes
 
