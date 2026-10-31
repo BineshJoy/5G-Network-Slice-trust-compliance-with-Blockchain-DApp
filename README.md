@@ -1,4 +1,4 @@
-# 5G Network Slice compliance with Blockchain DApp
+# 5G Network Slice trust compliance with Blockchain DApp
 
 **A blockchain-based application for monitoring and recording Live 5G network slice Service Level Agreement (SLA) measurements and violations. The project combines Open5G Network Slicing simulator setup to a Blockchain Solidity smart contract, an Ethereum test network, a browser-based dashboard, and Python-based monitoring components.**
 
