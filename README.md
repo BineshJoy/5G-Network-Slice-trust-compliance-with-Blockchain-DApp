@@ -10,9 +10,9 @@
 4.	VM4-UPF02 - User Plane function 2(5G Slice 2)
 5.	VM5-Blockchain Layer (Ethereum-Sepolia)
 
-Imagine a 5G/6G network serving billions of devices—including autonomous vehicles, remote robotic surgeries, industries, IoT sensors, robots, drones, and smart city infrastructure—becoming interconnected at the same time. Each application requires a different level of latency, bandwidth, speed, reliability, and security. This is where network slicing becomes essential—but it also creates challenges. Ensuring trust, SLA, privacy, and identifying attacks on network slices in connected devices becomes increasingly challenging in 5G and 6G network slicing. 
+**Imagine a 5G/6G network serving billions of devices—including autonomous vehicles, remote robotic surgeries, industries, IoT sensors, robots, drones, and smart city infrastructure—becoming interconnected at the same time. Each application requires a different level of latency, bandwidth, speed, reliability, and security. This is where network slicing becomes essential—but it also creates challenges. Ensuring trust, SLA, privacy, and identifying attacks on network slices in connected devices becomes increasingly challenging in 5G and 6G network slicing. 
 
-Here, Blockchain will play an important role. These immutable contracts in the blockchain will ensure the recording of SLA violations and compliance of 5G network slices. This will help to ensure transparency between customers, vendors (Airtel, Jio, Idea, Vodafone), and product equipment providers (Ericsson, Nokia, ZTE, Samsung, Alcatel-Lucent) do transparent business with clarity of what they are providing to customers. This will help to avoid big legal battles with a immutable record of what violated and what complied.
+Here, Blockchain will play an important role. These immutable contracts in the blockchain will ensure the recording of SLA violations and compliance of 5G network slices. This will help to ensure transparency between customers, vendors (Airtel, Jio, Idea, Vodafone), and product equipment providers (Ericsson, Nokia, ZTE, Samsung, Alcatel-Lucent) do transparent business with clarity of what they are providing to customers. This will help to avoid big legal battles with a immutable record of what violated and what complied.**
 
 ## Features
 
