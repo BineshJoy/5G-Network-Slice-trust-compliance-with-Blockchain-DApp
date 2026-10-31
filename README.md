@@ -25,7 +25,7 @@ Here, Blockchain will play an important role. These immutable contracts in the b
 - Run local SLA integration and testing using Hardhat.
 
 ## Technology Stack
-- setting and bringing up Open5G setup
+- Setting and bringing up Open5G network Slicing setup
 - Solidity 0.8.34
 - Hardhat 3
 - Ethereum Sepolia Testnet
