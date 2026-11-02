@@ -158,7 +158,7 @@ network-slice-security-dapp/
 
 ![Network Slice Security DApp dashboard](docs/screenshots/)
 
-**Cloud Hosting (in Vercel) the Dapp to the Public Access**
+**Cloud Hosting (in Vercel) the Dapp for the Public Access**
 
 https://teamspecialcharactersvyuham26-front.vercel.app/ 
 
